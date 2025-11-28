@@ -6,7 +6,7 @@
     --accent: #e74c3c;
     --text-shadow-color: #95a5a6;
     /* Grey shadow for light mode */
-    --bg-image: url('day_bg.png');
+    --bg-image: url('bg/day_bg.png');
     --bg-size: cover;
 }
 
@@ -18,7 +18,7 @@
     --accent: #f1c40f;
     --text-shadow-color: #000000;
     /* Black shadow for dark mode */
-    --bg-image: url('night_bg.png');
+    --bg-image: url('bg/night_bg.png');
     --bg-size: cover;
     --bg-position: center;
 }
@@ -183,6 +183,26 @@ h1::after {
     line-height: 1.8;
 }
 
+.profile-pic-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid var(--box-border);
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+    background-color: var(--box-bg);
+    transition: transform 0.2s;
+}
+
+.profile-pic:hover {
+    transform: scale(1.05);
+}
+
 .pixel-box h2 {
     margin-bottom: 20px;
 }
@@ -233,7 +253,8 @@ h1::after {
 }
 
 #contact,
-#youtube {
+#youtube,
+#gear {
     flex: 1;
     min-width: 300px;
     /* Prevent squishing */
@@ -272,7 +293,8 @@ h1::after {
     box-shadow: 2px 2px 0px var(--box-border);
 }
 
-.youtube-link-container {
+.youtube-link-container,
+.gear-link-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -321,6 +343,23 @@ h1::after {
     width: 100%;
     height: 100%;
     border: 0;
+}
+
+#github-activity {
+    max-width: 1200px;
+    margin: 0 auto 60px;
+}
+
+.github-chart-container {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+    /* Allow scrolling on very small screens */
+}
+
+#github-chart {
+    max-width: 100%;
+    height: auto;
 }
 
 #awards {
@@ -511,6 +550,7 @@ footer {
 
     #contact,
     #youtube,
+    #gear,
     #about,
     #skills {
         min-width: 100%;
@@ -621,4 +661,38 @@ label:hover {
 /* Light mode pixel color */
 [data-theme="light"] .pixel {
     background-color: #f0f0f0;
+}
+
+/* Gear Page Styles */
+.gear-list {
+    list-style: none;
+    text-align: left;
+    padding: 0 20px;
+}
+
+.gear-list li {
+    margin-bottom: 20px;
+    border-bottom: 2px dashed var(--box-border);
+    padding-bottom: 10px;
+}
+
+.gear-list li:last-child {
+    border-bottom: none;
+}
+
+.gear-category {
+    font-weight: bold;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.gear-item {
+    font-size: 0.8rem;
+}
+
+.back-button-container {
+    margin-top: 30px;
+    text-align: center;
 }

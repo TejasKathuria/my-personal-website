@@ -23,8 +23,17 @@ toggleButton.addEventListener('click', () => {
 function updateIcon(theme) {
     if (theme === 'dark') {
         icon.textContent = '🌙';
+        updateGithubChart('f1c40f'); // Yellow accent for dark mode
     } else {
         icon.textContent = '☀️';
+        updateGithubChart('e74c3c'); // Red accent for light mode
+    }
+}
+
+function updateGithubChart(color) {
+    const chart = document.getElementById('github-chart');
+    if (chart) {
+        chart.src = `https://ghchart.rshah.org/${color}/TejasKathuria`;
     }
 }
 
