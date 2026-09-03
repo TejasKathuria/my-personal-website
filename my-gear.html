@@ -4,60 +4,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Gear | Tejas Kathuria</title>
+    <title>My Gear & Setup — Tejas Kathuria</title>
+    <meta name="description" content="Tools, devices, and workspace setup used by Tejas Kathuria.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div id="pixel-overlay"></div>
-    <div class="container">
-        <header>
-            <button id="theme-toggle" aria-label="Toggle Dark Mode">
-                <span class="icon">☀️</span>
-            </button>
+    <!-- Procedural Paper Texture Overlay -->
+    <div class="paper-bg" aria-hidden="true"></div>
+
+    <div class="page-container">
+        <!-- Top Navigation -->
+        <header class="top-nav">
+            <a href="index.html" class="brand-badge">
+                <span>←</span> back to home
+            </a>
+
+            <div class="controls-cluster">
+                <button type="button" id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
+                    <span class="sun-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="4"></circle>
+                            <path d="M12 2v2"></path>
+                            <path d="M12 20v2"></path>
+                            <path d="m4.93 4.93 1.41 1.41"></path>
+                            <path d="m17.66 17.66 1.41 1.41"></path>
+                            <path d="M2 12h2"></path>
+                            <path d="M20 12h2"></path>
+                            <path d="m6.34 17.66-1.41 1.41"></path>
+                            <path d="m19.07 4.93-1.41 1.41"></path>
+                        </svg>
+                    </span>
+                    <span class="moon-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+                        </svg>
+                    </span>
+                </button>
+            </div>
         </header>
 
-        <main>
-            <section id="gear-list-section">
-                <div class="pixel-box">
-                    <h2>My Gear</h2>
-                    <ul class="gear-list">
-                        <li>
-                            <span class="gear-category">Laptop (mac):</span>
-                            <span class="gear-item">Apple MacBook Air M4 13" (16GB+512GB)</span>
-                        </li>
-                        <li>
-                            <span class="gear-category">Laptop (windows):</span>
-                            <span class="gear-item">HP 15s (Intel Core i3, 16GB RAM, 1.5TB Storage)</span>
-                        </li>
-                        <li>
-                            <span class="gear-category">Phone:</span>
-                            <span class="gear-item">iPhone 12 Mini</span>
-                        </li>
-                        <li>
-                            <span class="gear-category">Headphones:</span>
-                            <span class="gear-item">Sony WH-1000XM5</span>
-                        </li>
-                        <li>
-                            <span class="gear-category">Tablet:</span>
-                            <span class="gear-item">iPad (8th gen)</span>
-                        </li>
-                    </ul>
-                    <div class="back-button-container">
-                        <a href="index.html" class="pixel-button">Back to Home</a>
+        <main id="main">
+            <section class="content-section" style="margin-top: 1rem;">
+                <p class="section-eyebrow">Workspace & Hardware</p>
+                <h1 class="section-heading">My Everyday Gear</h1>
+                <p class="story-text" style="color: var(--ink-muted); margin-bottom: 2rem;">
+                    A curated collection of machines, audio gear, mobile devices, and musical instruments I use daily for software development, learning, and creative projects.
+                </p>
+
+                <div class="gear-grid">
+                    <div class="gear-card">
+                        <span class="gear-card-icon">💻</span>
+                        <div class="gear-card-details">
+                            <span class="gear-card-cat">Primary Mac Laptop</span>
+                            <h2 class="gear-card-name">Apple MacBook Air M4 13"</h2>
+                            <p class="gear-card-specs">16GB Unified RAM · 512GB SSD Storage · Apple Silicon</p>
+                        </div>
+                    </div>
+
+                    <div class="gear-card">
+                        <span class="gear-card-icon">🖥️</span>
+                        <div class="gear-card-details">
+                            <span class="gear-card-cat">Secondary Windows Machine</span>
+                            <h2 class="gear-card-name">HP 15s</h2>
+                            <p class="gear-card-specs">Intel Core i3 · 16GB RAM · 1.5TB Storage</p>
+                        </div>
+                    </div>
+
+                    <div class="gear-card">
+                        <span class="gear-card-icon">📱</span>
+                        <div class="gear-card-details">
+                            <span class="gear-card-cat">Pocket Device</span>
+                            <h2 class="gear-card-name">iPhone 12 Mini</h2>
+                            <p class="gear-card-specs">Compact daily phone for calls, quick testing, and on-the-go browsing</p>
+                        </div>
+                    </div>
+
+                    <div class="gear-card">
+                        <span class="gear-card-icon">🎧</span>
+                        <div class="gear-card-details">
+                            <span class="gear-card-cat">Audio & Focus</span>
+                            <h2 class="gear-card-name">Sony WH-1000XM5</h2>
+                            <p class="gear-card-specs">Industry-leading Active Noise Cancellation for deep focus coding</p>
+                        </div>
+                    </div>
+
+                    <div class="gear-card">
+                        <span class="gear-card-icon">📱</span>
+                        <div class="gear-card-details">
+                            <span class="gear-card-cat">Digital Tablet</span>
+                            <h2 class="gear-card-name">iPad (8th Generation)</h2>
+                            <p class="gear-card-specs">Digital note-taking, sketching UI concepts, and reading docs</p>
+                        </div>
+                    </div>
+
+                    <div class="gear-card">
+                        <span class="gear-card-icon">🎸</span>
+                        <div class="gear-card-details">
+                            <span class="gear-card-cat">Musical Instruments</span>
+                            <h2 class="gear-card-name">Guitars</h2>
+                            <p class="gear-card-specs">Acoustic & Electric 6-string guitars for music exploration</p>
+                        </div>
                     </div>
                 </div>
             </section>
         </main>
 
-        <footer>
-            <p>~ crafted by Tejas</p>
+        <footer class="editorial-footer">
+            <div class="footer-top-row">
+                <div class="status-pill">
+                    <span class="status-dot"></span>
+                    <span>Based in India · <strong id="live-clock">--:--:-- IST</strong></span>
+                </div>
+                <div class="footer-social-links">
+                    <a href="https://github.com/TejasKathuria" target="_blank" rel="noopener noreferrer" class="footer-icon-link" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://twitter.com/tejaskathuria_" target="_blank" rel="noopener noreferrer" class="footer-icon-link" aria-label="Twitter / X">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/tejaskathuria_/" target="_blank" rel="noopener noreferrer" class="footer-icon-link" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://youtube.com/@tejaskathuria?si=Qx_hOdwHN3QdiLei" target="_blank" rel="noopener noreferrer" class="footer-icon-link" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="mailto:kathuriatectejas08@gmail.com" class="footer-icon-link" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom-row">
+                <span>~ crafted with passion by Tejas Kathuria</span>
+                <span>© 2026 · All rights reserved</span>
+            </div>
         </footer>
     </div>
+
     <script src="script.js"></script>
 </body>
 

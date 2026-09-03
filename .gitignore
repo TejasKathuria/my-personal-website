@@ -1,0 +1,13 @@
+# Dependencies
+node_modules/
+
+# OS metadata
+.DS_Store
+*/.DS_Store
+**/.DS_Store
+Thumbs.db
+
+# Scratch and temp files
+scratch_hero_svg.html
+scratch/
+*.log
