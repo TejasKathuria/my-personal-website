@@ -8,7 +8,7 @@ class TLogoReveal {
         this.config = {
             drawEnd: 1,
             shrinkStart: 0.72,
-            shrinkTo: 0.22,
+            shrinkTo: 0.37,
             burstDistance: 450, // px distance over which stickers burst outward
         };
 

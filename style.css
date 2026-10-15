@@ -22,6 +22,10 @@
     --line: #e6e6ec;
     --line-subtle: #f0f0f4;
 
+    /* Background Light Grid */
+    --grid-line: rgba(17, 17, 19, 0.09);
+    --grid-size: clamp(40px, 5.5vw, 56px);
+
     /* Chat Bubble Tokens (iMessage aesthetic) */
     --chat-bubble-bg: #f0f0f3;
     --chat-bubble-fg: #111113;
@@ -64,6 +68,9 @@
     --line: #24242c;
     --line-subtle: #1a1a20;
 
+    /* Background Light Grid (Dark Mode) */
+    --grid-line: rgba(245, 245, 248, 0.08);
+
     --chat-bubble-bg: #202027;
     --chat-bubble-fg: #f5f5f8;
 
@@ -95,6 +102,11 @@ html {
 
 body {
     background-color: var(--bg);
+    background-image: 
+        linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+    background-size: var(--grid-size) var(--grid-size);
+    background-position: center top;
     color: var(--ink);
     font-family: var(--font-body);
     font-size: 1rem;
@@ -304,13 +316,13 @@ body {
 }
 
 .hero-greeting__photo {
-    width: 3.25rem;
-    height: 3.25rem;
+    width: 4.5rem;
+    height: 4.5rem;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid var(--surface);
     box-shadow: var(--shadow-sticker);
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.5rem;
 }
 
 .hero-thinking {
@@ -592,7 +604,7 @@ body {
     :root {
         --ring-x: clamp(120px, 35vw, 155px);
         --ring-y: clamp(90px, 15vh, 125px);
-        --mark-unit: clamp(4.2px, 1.2vmin, 5.6px);
+        --mark-unit: clamp(4.6px, 1.3vmin, 5.8px);
     }
 
     .hero-mark__art {
@@ -712,7 +724,7 @@ body {
 
 /* Chat Message Thread About Section (gyanl.com signature) */
 .about-section {
-    margin-top: 1rem;
+    margin-top: clamp(1.25rem, 2.5vh, 1.75rem);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1531,6 +1543,12 @@ body {
 .reveal-item.is-visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Neko Cursor Companion */
+#oneko {
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
 }
 
 @media (prefers-reduced-motion: reduce) {
